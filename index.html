@@ -7,33 +7,37 @@
     <title>AI Song Generator</title>
   </head>
   <body>
-    <header>
-      <h1>Song Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of the song"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <div>The song will go here.</div>
-    </main>
-    <footer>
-      This was coded by
-      <a href="https://github.com/elin17" target="_blank">Elin DR</a> and is
-      <a href="https://github.com/elin17/song-generator" target="_blank">
-        open-sourced on github</a
-      >
-      is hosted on
-      <a href="https://elin-song-generator.netlify.app/" target="_blank">
-        Netlify.</a
-      >
-    </footer>
+    <div class="container">
+      <header>
+        <h1>Song Generator</h1>
+      </header>
+
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter the topic of the song"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="song">The song will go here.</div>
+      </main>
+      <footer>
+        This was coded by
+        <a href="https://github.com/elin17" target="_blank">Elin DR</a> and is
+        <a href="https://github.com/elin17/song-generator" target="_blank">
+          open-sourced on github</a
+        >
+        is hosted on
+        <a href="https://elin-song-generator.netlify.app/" target="_blank">
+          Netlify.</a
+        >
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
