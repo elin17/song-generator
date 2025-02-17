@@ -62,6 +62,10 @@ form {
   border-radius: 10px;
 }
 
+.song strong {
+  color: pink;
+}
+
 footer {
   text-align: center;
   font-size: 15px;
