@@ -1,6 +1,6 @@
-function displaySong(response) {
-  console.log("Song generated");
-  new Typewriter("#song", {
+function displayRecipe(response) {
+  console.log("Recipe generated");
+  new Typewriter("#recipe", {
     strings: response.data.answer,
     autoStart: true,
     delay: 1,
@@ -8,30 +8,30 @@ function displaySong(response) {
   });
 }
 
-function generateSong(event) {
+function generateRecipe(event) {
   event.preventDefault();
 
   let instructionsInput = document.querySelector("#user-instructions");
 
   //build the API Url
   let apiKey = "f9637fbe40fo43a051a477t366b0ae24";
-  let prompt = `User Instructions: Generate lyrics to a song about ${instructionsInput.value}`;
+  let prompt = `User Instructions: Generate a delicious recipe about ${instructionsInput.value}`;
   let context =
-    "You are a music genius and can compose beautiful lyrics to any song. Please follow the user's instructions and provide the chorus lyrics to a song (only four lines) that the user is requesting for. Please sign it at the end with 'By Elin DR' in <strong>.";
+    "You are a cooking master and you can create recipes with any ingredient given to you. Please follow the user's instructions and provide a recipe with the main ingredient that the user has entered. Please make sure to write the name of the dish first and then add </br>. Then list the ingredients (itemized) and add </br> after each ingredient. Then add </br></br> and then list the cooking steps (numbered with each step), putting </br> after each step. Please sign it at the end with 'Goodluck and enjoy! 🥘' in <strong>.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   //make a call to the api
 
-  let songElement = document.querySelector("#song");
-  songElement.classList.remove("hidden");
-  songElement.innerHTML = `<div class="generating">⏳ Generating song about ${instructionsInput.value}</div>`;
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
+  recipeElement.innerHTML = `<div class="generating">👩🏻‍🍳👨🏽‍🍳 Generating recipe for ${instructionsInput.value}</div>`;
 
-  console.log("Generating song");
+  console.log("Generating recipe");
   console.log(`Generating ${prompt}`);
   console.log(`Generating ${context}`);
-  axios.get(apiUrl).then(displaySong);
+  axios.get(apiUrl).then(displayRecipe);
   //display a generated poem
 }
 
-let songFormElement = document.querySelector("#song-generator-form");
-songFormElement.addEventListener("submit", generateSong);
+let recipeFormElement = document.querySelector("#recipe-generator-form");
+recipeFormElement.addEventListener("submit", generateRecipe);

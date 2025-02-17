@@ -66,7 +66,7 @@ form {
   padding: 14px 24px;
 }
 
-.song {
+.recipe {
   font-size: 14px;
   background-color: #5f6769;
   padding: 20px;
@@ -76,7 +76,7 @@ form {
   border-radius: 10px;
 }
 
-.song strong {
+.recipe strong {
   color: pink;
 }
 
