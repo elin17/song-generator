@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Song Generator</title>
   </head>
@@ -13,7 +14,7 @@
       </header>
 
       <main>
-        <form>
+        <form id="song-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of the song"
@@ -24,7 +25,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="song">The song will go here.</div>
+        <div class="song" id="song"></div>
       </main>
       <footer>
         This was coded by
