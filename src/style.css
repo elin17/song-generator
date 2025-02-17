@@ -23,15 +23,29 @@ header {
 a {
   color: #719192;
 }
-form {
+
+.form-container {
   padding: 30px;
   background-color: #5f6769;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
-  display: flex;
   margin-bottom: 30px;
 }
 
+form {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint {
+  line-height: 1.5;
+  margin-top: 7px;
+  opacity: 7;
+  font-size: 12px;
+}
 .instructions {
   padding: 16px;
   border: 1px solid grey;
@@ -70,4 +84,19 @@ footer {
   text-align: center;
   font-size: 15px;
   margin-top: 20px;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

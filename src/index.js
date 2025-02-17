@@ -22,6 +22,10 @@ function generateSong(event) {
 
   //make a call to the api
 
+  let songElement = document.querySelector("#song");
+  songElement.classList.remove("hidden");
+  songElement.innerHTML = `<div class="generating">⏳ Generating song about ${instructionsInput.value}</div>`;
+
   console.log("Generating song");
   console.log(`Generating ${prompt}`);
   console.log(`Generating ${context}`);

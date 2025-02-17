@@ -15,19 +15,22 @@
       </header>
 
       <main>
-        <form id="song-generator-form">
-          <input
-            type="text"
-            placeholder="Enter the topic of the song"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="song" id="song"></div>
+        <div class="form-container">
+          <form id="song-generator-form">
+            <input
+              type="text"
+              placeholder="Enter the topic of the song"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e. Love</div>
+        </div>
+        <div class="song hidden" id="song"></div>
       </main>
       <footer>
         This was coded by
